@@ -19,7 +19,7 @@ package de.wdilab.coma.gui;
 
 /**
  * start the COMA++ GUI 
- *// test
+ *
  * @author Sabine Massmann
  */
 public class Main {
