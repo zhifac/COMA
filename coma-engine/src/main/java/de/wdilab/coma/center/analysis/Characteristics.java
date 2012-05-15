@@ -32,8 +32,6 @@ import java.util.Iterator;
  * @author Sabine Massmann
  */
 public class Characteristics {
-
-	// test
 	
     //	boolean name = false;
 	public boolean structure = false;
