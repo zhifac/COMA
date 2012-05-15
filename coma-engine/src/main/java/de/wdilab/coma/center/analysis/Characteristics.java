@@ -33,6 +33,8 @@ import java.util.Iterator;
  */
 public class Characteristics {
 
+	// test
+	
     //	boolean name = false;
 	public boolean structure = false;
 	public boolean comments = false;
