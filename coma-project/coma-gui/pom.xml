@@ -15,6 +15,7 @@
                 <configuration>
                     <source>1.6</source>
                     <target>1.6</target>
+                    <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
             <plugin>
@@ -93,6 +94,19 @@
 		  <classifier>ontowrap</classifier>
 		  <scope>system</scope>
 		  <systemPath>${basedir}/../lib/align-4.2-ontowrap.jar</systemPath>
-		</dependency> 
+		</dependency>
+      <dependency>
+          <!-- be aware: this library is not in the maven repository but in the parent lib folder -->
+          <groupId>de.wdilab</groupId>
+          <artifactId>MatchLibrary-CE</artifactId>
+          <version>1.0.2</version>
+          <scope>system</scope>
+          <systemPath>${basedir}/../lib/MatchLibrary-CE-1.0.2.jar</systemPath>
+      </dependency>
+      <dependency>
+          <groupId>mysql</groupId>
+          <artifactId>mysql-connector-java</artifactId>
+          <version>5.1.9</version>
+      </dependency>
   </dependencies>
 </project>
