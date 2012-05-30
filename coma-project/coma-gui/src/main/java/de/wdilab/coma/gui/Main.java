@@ -25,11 +25,7 @@ package de.wdilab.coma.gui;
 public class Main {
 	public static void main(String[] _args) throws Exception {
 		System.out.println(GUIConstants.COMA_ASCIIART);
-
-        System.out.println( System.getProperty("java.classpath"));
-
 		Controller c = new Controller();
 		c.start();
-
 	}
 }
