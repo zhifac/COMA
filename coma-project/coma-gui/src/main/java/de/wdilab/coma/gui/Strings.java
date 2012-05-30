@@ -41,7 +41,7 @@ public class Strings {
 	public static final String INTERNAL_SIM = "INTERNAL_SIM";
 	// **************************************
 	// properties
-	public static final String PROPERTY_FILE = "_coma++.txt";
+	public static final String PROPERTY_FILE = "coma.properties";
 	// **************************************
 	// abbreviation and synonyms
 	public static final String FILE_SYN_DEFAULT = "PO_syns.txt";
