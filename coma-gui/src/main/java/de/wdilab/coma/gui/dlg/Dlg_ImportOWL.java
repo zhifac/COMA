@@ -49,7 +49,7 @@ import de.wdilab.coma.insert.metadata.OWLParser_V3;
 /**
  * This dialog offers the change to import an ontology (or more specific owl file).
  * 
- * @author David Aumüller, Sabine Massmann
+ * @author David Aumueller, Sabine Massmann
  */
 public class Dlg_ImportOWL extends JDialog {
 	Controller controller = null;

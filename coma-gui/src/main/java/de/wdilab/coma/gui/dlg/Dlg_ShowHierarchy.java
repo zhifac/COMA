@@ -41,7 +41,7 @@ import de.wdilab.coma.gui.SimpleJTree;
 /**
  * Show hierarchy from Graph as JTree
  * 
- * @author David Aumüller, Sabine Massmann
+ * @author David Aumueller, Sabine Massmann
  * 
  * TODO clean output/toString() enable matcher configuration from
  *         within matcher hierarchy?

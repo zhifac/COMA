@@ -105,6 +105,7 @@ public class Repository {
 			System.out.println("connectToDatabase(): " + e.getMessage());
 		} catch (Exception e) {
 			System.out.println("connectToDatabase(): " + e.getMessage());
+            e.printStackTrace();
 		}
 	}
 

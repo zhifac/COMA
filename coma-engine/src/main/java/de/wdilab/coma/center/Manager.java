@@ -78,7 +78,7 @@ public class Manager {
 		}
 		return exec; 
 	}
-	
+
 	public void loadRepository(){
 	    HashSet<Source> sources = accessor.getSources();
 	    if (sources==null) return;
