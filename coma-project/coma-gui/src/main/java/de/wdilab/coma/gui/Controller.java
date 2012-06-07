@@ -214,11 +214,13 @@ public class Controller {
 
 	public static void setSystemProperties(){
 		try {
-			// read in property file
+            // read in property file
 			java.io.FileInputStream propFile = new java.io.FileInputStream(
 					Strings.PROPERTY_FILE);
             java.util.Properties p = new java.util.Properties(System.getProperties());
 			p.load(propFile);
+
+
 			// writing like this ...
 			//java.util.Properties p = new
 			// java.util.Properties(System.getProperties());

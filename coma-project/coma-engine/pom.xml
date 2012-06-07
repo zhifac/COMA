@@ -230,6 +230,6 @@
 		  <classifier>ontowrap</classifier>
 		  <scope>system</scope>
 		  <systemPath>${basedir}/../lib/align-4.2-ontowrap.jar</systemPath>
-		</dependency>		
+		</dependency>
   </dependencies>
 </project>
