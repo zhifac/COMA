@@ -139,7 +139,7 @@ options {output=AST;backtrack=true;}
 	RESOLUTION_1 :		( 'paths' | 'innerpaths' | 'leafpaths' | 'nodes' | 'innernodes' | 'leafnodes' | 'roots' | 'shared' | 'uppaths' | 'downpaths' | 'user' | 'sharedpaths');
 	RESOLUTION_2 :		( 'selfpath' | 'selfnode' | 'parents' | 'siblings' | 'children' | 'leaves' | 'allnodes' | 'successors');
 	RESOLUTION_3 :		( 'name' | 'nametoken' | 'path' | 'pathtoken' | 'pathsyn' | 'comment' | 'commenttoken' | 'datatype' | 'statistics' | 
-				'synonyms' | 'instance_constraints' | 'instance_content' |'instance_content_indirect' | 'nameandsynonyms' );
+				'synonyms' | 'instance_constraints' | 'instance_content' |'instance_content_indirect' |'instance_all' | 'nameandsynonyms' );
 
 
 	SIMMEASURE:		('trigram' | 'soundex' | 'editdist' | 'datatypesimilarity' | 'featvect' | 'tfidf' | 
