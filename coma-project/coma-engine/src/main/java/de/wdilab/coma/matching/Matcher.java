@@ -42,11 +42,14 @@ public class Matcher{
 	public static final int NAME = Constants.MATCH_CNT + 6;
 	public static final int SYNONYM = Constants.MATCH_CNT + 7;
 	public static final int NAMESYNONYM = Constants.MATCH_CNT + 8;
-	public static final int PATH = Constants.MATCH_CNT + 9;  
+	public static final int PATH = Constants.MATCH_CNT + 9;
+	public static final int INSTANCES_DIRECT = Constants.MATCH_CNT + 10;
+	public static final int INSTANCES_ALL = Constants.MATCH_CNT + 11;
 	
 	public static final Integer[] MATCHER = {
 //		NAMETOKEN, 
-		DATATYPE, STATISTICS, COMMENT, PATHTOKEN, NAME, SYNONYM, NAMESYNONYM, PATH
+		DATATYPE, STATISTICS, COMMENT, PATHTOKEN, NAME, SYNONYM, NAMESYNONYM, PATH,
+		INSTANCES_DIRECT, INSTANCES_ALL
 	};
 	public static final List<Integer> MATCHER_LIST = Arrays.asList(MATCHER);
 	
@@ -176,6 +179,20 @@ public class Matcher{
 				simMeasures[0] = new SimilarityMeasure(SimilarityMeasure.SIM_STR_TRIGRAM);
 				setCombination = new Combination(Combination.SET_AVERAGE);
 				setName("PathM");
+				break;
+			case INSTANCES_DIRECT:
+				this.resolution = new Resolution(Resolution.RES3_INST_CONTENT_DIRECT);
+				simMeasures = new SimilarityMeasure[1];
+				simMeasures[0] = new SimilarityMeasure(SimilarityMeasure.SIM_STR_JACCARD);
+				setCombination = new Combination(Combination.SET_AVERAGE);
+				setName("InstancesDirectM");
+				break;
+			case INSTANCES_ALL:
+				this.resolution = new Resolution(Resolution.RES3_INST_CONTENT_ALL);
+				simMeasures = new SimilarityMeasure[1];
+				simMeasures[0] = new SimilarityMeasure(SimilarityMeasure.SIM_STR_JACCARD);
+				setCombination = new Combination(Combination.SET_AVERAGE);
+				setName("InstancesAllM");
 				break;
 			default :
 				System.out.println("Matcher id not known " + matcher);

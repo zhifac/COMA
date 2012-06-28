@@ -51,6 +51,7 @@ public class ComplexMatcher{
 //	public static final int PATHNODES2 = Constants.COMPLEXMATCH_CNT + 106;
 	public static final int SUCCESSORS = Constants.COMPLEXMATCH_CNT + 107;
 	
+	public static final int INSTANCES = Constants.COMPLEXMATCH_CNT + 108;
 	
 	
 	public static final Integer[] COMPLEXMATCHER = {
@@ -59,6 +60,8 @@ public class ComplexMatcher{
 		
 		// previous Strategy
 		PARENTS, CHILDREN, SIBLINGS, NAMEPATH,  SUCCESSORS, // PATHNODES2,
+		
+		INSTANCES
 	};
 	public static final List<Integer> COMPLEXMATCH_LIST = Arrays.asList(COMPLEXMATCHER);
 	  
@@ -306,6 +309,15 @@ public class ComplexMatcher{
 			m_cm[0] = new ComplexMatcher(ComplexMatcher.NAME); // NAMETYPE NAME NAMESYN
 			setCombination = new Combination(Combination.SET_AVERAGE); // SET_AVERAGE SET_DICE
 			setName("SuccessorsCM");
+			break;
+			
+		case INSTANCES :
+			this.resolution = new Resolution(Resolution.RES2_SELFNODE);
+			m_cm = new Matcher[2];
+			m_cm[0] = new Matcher(Matcher.INSTANCES_DIRECT);
+			m_cm[1] = new Matcher(Matcher.INSTANCES_ALL);
+			setCombination = new Combination(Combination.SET_MAX); // SET_AVERAGE SET_DICE
+			setName("InstancesCM");
 			break;
 			
 		default :
