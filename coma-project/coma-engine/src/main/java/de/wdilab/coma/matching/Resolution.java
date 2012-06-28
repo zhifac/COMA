@@ -129,7 +129,7 @@ public class Resolution{
 	public static final Integer[] RES3 = {
 		RES3_NAME, RES3_NAMETOKEN, RES3_DATATYPE, RES3_COMMENT, RES3_COMMENTTOKEN, 
 		RES3_PATH, RES3_PATHTOKEN, RES3_SYNONYMS, RES3_NAMESYN, RES3_PATHSYN, // RES3_CONSTRAINTS, 		
-		RES3_STATISTICS, RES3_INST_CONSTRAINTS, RES3_INST_CONTENT_DIRECT, RES3_INST_CONTENT_INDIRECT
+		RES3_STATISTICS, RES3_INST_CONSTRAINTS, RES3_INST_CONTENT_DIRECT, RES3_INST_CONTENT_INDIRECT, RES3_INST_CONTENT_ALL
 	};
 	public static final List<Integer> RES3_LIST = Arrays.asList(RES3);
 	
@@ -208,7 +208,8 @@ public class Resolution{
 		case RES3_STATISTICS:    	return "Statistics";
 		case RES3_INST_CONSTRAINTS: return "Instance_Constraints";
 		case RES3_INST_CONTENT_DIRECT:     return "Instance_Content";
-		case RES3_INST_CONTENT_INDIRECT:     return "Instance_Content_Indirect";		
+		case RES3_INST_CONTENT_INDIRECT:     return "Instance_Content_Indirect";
+		case RES3_INST_CONTENT_ALL:     return "Instance_All";
 		case RES3_NAMESYN:    		return "NameAndSynonyms";
 		
 		default: return "UNDEF";
@@ -258,6 +259,7 @@ public class Resolution{
         else if (resolution.equals("instance_constraints"))  return RES3_INST_CONSTRAINTS;
         else if (resolution.equals("instance_content"))  return RES3_INST_CONTENT_DIRECT;  
         else if (resolution.equals("instance_content_indirect"))  return RES3_INST_CONTENT_INDIRECT;
+        else if (resolution.equals("instance_all"))  return RES3_INST_CONTENT_ALL;
         else if (resolution.equals("nameandsynonyms"))  return RES3_NAMESYN;
         
         return Constants.UNDEF;
@@ -484,8 +486,10 @@ public class Resolution{
 			}
 			if (objects!=null){
 				res3.add(size, objects);
-				size++;
+			} else {
+				res3.add(size, null);
 			}
+			size++;
 		}
 		return res3;
 	}
@@ -497,6 +501,8 @@ public class Resolution{
 			ArrayList<Object> current = compositeObjects.get(i);
 			if (current!=null){
 				singleObjects.addAll(current);
+			} else {
+				singleObjects.add(null);
 			}
 		}
 		return singleObjects;
@@ -858,6 +864,8 @@ public class Resolution{
 		  case RES3_NAMESYN: 
 		  case RES3_INST_CONSTRAINTS: 
 		  case RES3_INST_CONTENT_DIRECT:
+		  case RES3_INST_CONTENT_INDIRECT:
+		  case RES3_INST_CONTENT_ALL:
 			  return String.class;
 						
 //		  case RES3_CONSTRAINTS: 
