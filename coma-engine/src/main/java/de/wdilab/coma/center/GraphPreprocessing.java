@@ -126,7 +126,7 @@ public class GraphPreprocessing {
 		}
 		
 //		// loadAndPropagateInstances
-//		graph =  accessor.loadAndPropagateInstances(loadInstances, graph); 
+		graph =  accessor.loadAndPropagateInstances(loadInstances, graph); 
 		
 		 // computeStatistics
 //		GraphUtil.computeStatistics(graph.getGraph(Graph.PREP_DEFAULT_ONTOLOGY));
