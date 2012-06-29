@@ -1,35 +1,12 @@
-/*
- *  COMA 3.0 Community Edition
- *
- *  This program is free software: you can redistribute it and/or modify
- *  it under the terms of the GNU Affero General Public License as published by
- *  the Free Software Foundation, either version 3 of the License, or
- *  (at your option) any later version.
- *
- *  This program is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU Affero General Public License for more details.
- *
- *  You should have received a copy of the GNU Affero General Public License
- *  along with this program.  If not, see http://www.gnu.org/licenses/.
- */
-
 package de.wdilab.coma.matching.validation;
 
-
-// $ANTLR 3.3 Nov 30, 2010 12:45:30 C:\\Users\\arnold\\Documents\\grammar\\ComaWorkFlow.g 2012-03-13 10:50:45
+// $ANTLR 3.3 Nov 30, 2010 12:45:30 C:\\Users\\arnold\\Documents\\grammar\\ComaWorkFlow.g 2012-06-29 09:44:49
 
 import org.antlr.runtime.*;
 import java.util.Stack;
 import java.util.List;
 import java.util.ArrayList;
 
-/**
- * This call is automatically created by antlr from the grammar ComaWorkFlow.g.
- * 
- * @author Patrick Arnold, Sabine Massmann
- */
 public class ComaWorkFlowLexer extends Lexer {
     public static final int EOF=-1;
     public static final int CHAR_BRACE_LEFT=4;
@@ -386,11 +363,11 @@ public class ComaWorkFlowLexer extends Lexer {
         try {
             int _type = RESOLUTION_3;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\arnold\\Documents\\grammar\\ComaWorkFlow.g:141:14: ( ( 'name' | 'nametoken' | 'path' | 'pathtoken' | 'pathsyn' | 'comment' | 'commenttoken' | 'datatype' | 'statistics' | 'synonyms' | 'instance_constraints' | 'instance_content' | 'instance_content_indirect' | 'nameandsynonyms' ) )
-            // C:\\Users\\arnold\\Documents\\grammar\\ComaWorkFlow.g:141:17: ( 'name' | 'nametoken' | 'path' | 'pathtoken' | 'pathsyn' | 'comment' | 'commenttoken' | 'datatype' | 'statistics' | 'synonyms' | 'instance_constraints' | 'instance_content' | 'instance_content_indirect' | 'nameandsynonyms' )
+            // C:\\Users\\arnold\\Documents\\grammar\\ComaWorkFlow.g:141:14: ( ( 'name' | 'nametoken' | 'path' | 'pathtoken' | 'pathsyn' | 'comment' | 'commenttoken' | 'datatype' | 'statistics' | 'synonyms' | 'instance_constraints' | 'instance_content' | 'instance_content_indirect' | 'instance_all' | 'nameandsynonyms' ) )
+            // C:\\Users\\arnold\\Documents\\grammar\\ComaWorkFlow.g:141:17: ( 'name' | 'nametoken' | 'path' | 'pathtoken' | 'pathsyn' | 'comment' | 'commenttoken' | 'datatype' | 'statistics' | 'synonyms' | 'instance_constraints' | 'instance_content' | 'instance_content_indirect' | 'instance_all' | 'nameandsynonyms' )
             {
-            // C:\\Users\\arnold\\Documents\\grammar\\ComaWorkFlow.g:141:17: ( 'name' | 'nametoken' | 'path' | 'pathtoken' | 'pathsyn' | 'comment' | 'commenttoken' | 'datatype' | 'statistics' | 'synonyms' | 'instance_constraints' | 'instance_content' | 'instance_content_indirect' | 'nameandsynonyms' )
-            int alt3=14;
+            // C:\\Users\\arnold\\Documents\\grammar\\ComaWorkFlow.g:141:17: ( 'name' | 'nametoken' | 'path' | 'pathtoken' | 'pathsyn' | 'comment' | 'commenttoken' | 'datatype' | 'statistics' | 'synonyms' | 'instance_constraints' | 'instance_content' | 'instance_content_indirect' | 'instance_all' | 'nameandsynonyms' )
+            int alt3=15;
             alt3 = dfa3.predict(input);
             switch (alt3) {
                 case 1 :
@@ -498,7 +475,15 @@ public class ComaWorkFlowLexer extends Lexer {
                     }
                     break;
                 case 14 :
-                    // C:\\Users\\arnold\\Documents\\grammar\\ComaWorkFlow.g:142:93: 'nameandsynonyms'
+                    // C:\\Users\\arnold\\Documents\\grammar\\ComaWorkFlow.g:142:92: 'instance_all'
+                    {
+                    match("instance_all"); 
+
+
+                    }
+                    break;
+                case 15 :
+                    // C:\\Users\\arnold\\Documents\\grammar\\ComaWorkFlow.g:142:109: 'nameandsynonyms'
                     {
                     match("nameandsynonyms"); 
 
@@ -1938,24 +1923,24 @@ public class ComaWorkFlowLexer extends Lexer {
         }
     }
     static final String DFA3_eotS =
-        "\21\uffff\1\27\1\32\14\uffff\1\42\14\uffff\1\56\2\uffff";
+        "\21\uffff\1\27\1\32\14\uffff\1\42\15\uffff\1\57\2\uffff";
     static final String DFA3_eofS =
-        "\57\uffff";
+        "\60\uffff";
     static final String DFA3_minS =
         "\1\143\2\141\1\157\1\uffff\1\164\1\156\1\155\1\164\1\155\2\uffff"+
         "\1\163\1\145\1\150\1\155\1\164\1\141\1\163\1\145\1\141\6\uffff\2"+
-        "\156\1\164\1\143\1\164\1\145\2\uffff\1\137\1\143\1\157\1\156\1\163"+
-        "\1\uffff\1\145\1\156\1\164\1\137\2\uffff";
+        "\156\1\164\1\143\1\164\1\145\2\uffff\1\137\1\141\1\157\1\uffff\1"+
+        "\156\1\163\1\uffff\1\145\1\156\1\164\1\137\2\uffff";
     static final String DFA3_maxS =
         "\1\163\2\141\1\157\1\uffff\1\171\1\156\1\155\1\164\1\155\2\uffff"+
         "\1\163\1\145\1\150\1\155\3\164\1\145\1\141\6\uffff\2\156\1\164\1"+
-        "\143\1\164\1\145\2\uffff\1\137\1\143\1\157\1\156\1\164\1\uffff\1"+
-        "\145\1\156\1\164\1\137\2\uffff";
+        "\143\1\164\1\145\2\uffff\1\137\1\143\1\157\1\uffff\1\156\1\164\1"+
+        "\uffff\1\145\1\156\1\164\1\137\2\uffff";
     static final String DFA3_acceptS =
-        "\4\uffff\1\10\5\uffff\1\11\1\12\11\uffff\1\2\1\16\1\1\1\4\1\5\1"+
-        "\3\6\uffff\1\7\1\6\5\uffff\1\13\4\uffff\1\15\1\14";
+        "\4\uffff\1\10\5\uffff\1\11\1\12\11\uffff\1\2\1\17\1\1\1\4\1\5\1"+
+        "\3\6\uffff\1\7\1\6\3\uffff\1\16\2\uffff\1\13\4\uffff\1\15\1\14";
     static final String DFA3_specialS =
-        "\57\uffff}>";
+        "\60\uffff}>";
     static final String[] DFA3_transitionS = {
             "\1\3\1\4\4\uffff\1\6\4\uffff\1\1\1\uffff\1\2\2\uffff\1\5",
             "\1\7",
@@ -1993,15 +1978,16 @@ public class ComaWorkFlowLexer extends Lexer {
             "",
             "",
             "\1\44",
-            "\1\45",
-            "\1\46",
+            "\1\46\1\uffff\1\45",
             "\1\47",
-            "\1\50\1\51",
             "",
-            "\1\52",
+            "\1\50",
+            "\1\51\1\52",
+            "",
             "\1\53",
             "\1\54",
             "\1\55",
+            "\1\56",
             "",
             ""
     };
@@ -2036,7 +2022,7 @@ public class ComaWorkFlowLexer extends Lexer {
             this.transition = DFA3_transition;
         }
         public String getDescription() {
-            return "141:17: ( 'name' | 'nametoken' | 'path' | 'pathtoken' | 'pathsyn' | 'comment' | 'commenttoken' | 'datatype' | 'statistics' | 'synonyms' | 'instance_constraints' | 'instance_content' | 'instance_content_indirect' | 'nameandsynonyms' )";
+            return "141:17: ( 'name' | 'nametoken' | 'path' | 'pathtoken' | 'pathsyn' | 'comment' | 'commenttoken' | 'datatype' | 'statistics' | 'synonyms' | 'instance_constraints' | 'instance_content' | 'instance_content_indirect' | 'instance_all' | 'nameandsynonyms' )";
         }
     }
     static final String DFA4_eotS =

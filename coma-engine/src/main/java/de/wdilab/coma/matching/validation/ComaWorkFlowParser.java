@@ -1,23 +1,6 @@
-/*
- *  COMA 3.0 Community Edition
- *
- *  This program is free software: you can redistribute it and/or modify
- *  it under the terms of the GNU Affero General Public License as published by
- *  the Free Software Foundation, either version 3 of the License, or
- *  (at your option) any later version.
- *
- *  This program is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU Affero General Public License for more details.
- *
- *  You should have received a copy of the GNU Affero General Public License
- *  along with this program.  If not, see http://www.gnu.org/licenses/.
- */
-
 package de.wdilab.coma.matching.validation;
 
-// $ANTLR 3.3 Nov 30, 2010 12:45:30 C:\\Users\\arnold\\Documents\\grammar\\ComaWorkFlow.g 2012-03-13 10:50:45
+// $ANTLR 3.3 Nov 30, 2010 12:45:30 C:\\Users\\arnold\\Documents\\grammar\\ComaWorkFlow.g 2012-06-29 09:44:49
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -30,11 +13,6 @@ import java.io.IOException;
 
 import org.antlr.runtime.tree.*;
 
-/**
- * This call is automatically created by antlr from the grammar ComaWorkFlow.g.
- * 
- * @author Patrick Arnold, Sabine Massmann
- */
 public class ComaWorkFlowParser extends DebugParser {
     public static final String[] tokenNames = new String[] {
         "<invalid>", "<EOR>", "<DOWN>", "<UP>", "CHAR_BRACE_LEFT", "CHAR_BRACE_RIGHT", "CHAR_DOT", "CHAR_COMMA", "CHAR_SEMICOLON", "RESULT_COMBINATION", "RESOLUTION_1", "RESOLUTION_2", "SETCOMBINATION", "RESOLUTION_3", "SIMMEASURE", "DIGIT", "V2", "BOOLEAN", "COMPOSITION", "SIMCOMBINATION1", "DIRECTION", "SELECTION_THRESHOLD", "V1", "SELECTION_MAXDELTA", "SELECTION_MAXN", "SELECTION_MULTIPLE", "SIMCOMBINATION2"
@@ -68,22 +46,22 @@ public class ComaWorkFlowParser extends DebugParser {
     // delegators
 
     public static final String[] ruleNames = new String[] {
-        "invalidRule", "synpred14_ComaWorkFlow", "strategy", "synpred3_ComaWorkFlow", 
-        "synpred22_ComaWorkFlow", "similarityCombination", "synpred28_ComaWorkFlow", 
-        "selection", "synpred2_ComaWorkFlow", "synpred9_ComaWorkFlow", "matcher", 
-        "synpred39_ComaWorkFlow", "synpred29_ComaWorkFlow", "synpred10_ComaWorkFlow", 
-        "synpred19_ComaWorkFlow", "synpred30_ComaWorkFlow", "synpred36_ComaWorkFlow", 
-        "synpred26_ComaWorkFlow", "synpred6_ComaWorkFlow", "coma", "complexMatcher", 
-        "synpred18_ComaWorkFlow", "synpred37_ComaWorkFlow", "allowedToken", 
-        "synpred21_ComaWorkFlow", "synpred34_ComaWorkFlow", "synpred23_ComaWorkFlow", 
-        "synpred16_ComaWorkFlow", "synpred35_ComaWorkFlow", "synpred1_ComaWorkFlow", 
-        "synpred13_ComaWorkFlow", "synpred20_ComaWorkFlow", "synpred40_ComaWorkFlow", 
-        "synpred4_ComaWorkFlow", "synpred31_ComaWorkFlow", "synpred5_ComaWorkFlow", 
-        "synpred11_ComaWorkFlow", "workflow", "synpred32_ComaWorkFlow", 
-        "synpred33_ComaWorkFlow", "synpred24_ComaWorkFlow", "synpred7_ComaWorkFlow", 
-        "synpred12_ComaWorkFlow", "selectionParameter", "synpred38_ComaWorkFlow", 
-        "synpred27_ComaWorkFlow", "synpred15_ComaWorkFlow", "reuse", "synpred25_ComaWorkFlow", 
-        "synpred17_ComaWorkFlow", "synpred8_ComaWorkFlow"
+        "invalidRule", "synpred1_ComaWorkFlow", "synpred39_ComaWorkFlow", 
+        "synpred38_ComaWorkFlow", "synpred8_ComaWorkFlow", "reuse", "synpred17_ComaWorkFlow", 
+        "synpred28_ComaWorkFlow", "synpred5_ComaWorkFlow", "synpred10_ComaWorkFlow", 
+        "synpred11_ComaWorkFlow", "synpred24_ComaWorkFlow", "synpred6_ComaWorkFlow", 
+        "synpred13_ComaWorkFlow", "allowedToken", "strategy", "synpred20_ComaWorkFlow", 
+        "matcher", "synpred3_ComaWorkFlow", "complexMatcher", "synpred35_ComaWorkFlow", 
+        "selection", "synpred23_ComaWorkFlow", "synpred25_ComaWorkFlow", 
+        "coma", "synpred33_ComaWorkFlow", "synpred18_ComaWorkFlow", "synpred26_ComaWorkFlow", 
+        "synpred30_ComaWorkFlow", "synpred21_ComaWorkFlow", "synpred34_ComaWorkFlow", 
+        "synpred32_ComaWorkFlow", "synpred40_ComaWorkFlow", "similarityCombination", 
+        "synpred12_ComaWorkFlow", "synpred27_ComaWorkFlow", "synpred2_ComaWorkFlow", 
+        "synpred16_ComaWorkFlow", "synpred7_ComaWorkFlow", "synpred19_ComaWorkFlow", 
+        "synpred15_ComaWorkFlow", "synpred37_ComaWorkFlow", "synpred22_ComaWorkFlow", 
+        "synpred9_ComaWorkFlow", "synpred31_ComaWorkFlow", "synpred14_ComaWorkFlow", 
+        "selectionParameter", "synpred4_ComaWorkFlow", "workflow", "synpred29_ComaWorkFlow", 
+        "synpred36_ComaWorkFlow"
     };
     public static final boolean[] decisionCanBacktrack = new boolean[] {
         false, // invalid decision
