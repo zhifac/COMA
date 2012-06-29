@@ -705,14 +705,20 @@ public class ExecWorkflow {
 			if (srcCombinedObjects.get(i)==null){				
 				Object srcObject = srcObjects.get(i);
 				srcObjects2.add(srcObject);
-				srcSingleObjects2.addAll(resolution2Tmp.getResolution2(srcGraph, srcObject));				
+				ArrayList<Object> res2 = resolution2Tmp.getResolution2(srcGraph, srcObject);
+				if (res2!=null){
+					srcSingleObjects2.addAll(res2);
+				}
 			}
 		}
 		for (int i = 0; i < trgCombinedObjects.size(); i++) {
 			if (trgCombinedObjects.get(i)==null){
 				Object trgObject = trgObjects.get(i);	
 				trgObjects2.add(trgObject);
-				trgSingleObjects2.addAll(resolution2Tmp.getResolution2(trgGraph, trgObject));				
+				ArrayList<Object> res2 = resolution2Tmp.getResolution2(trgGraph, trgObject);
+				if (res2!=null){
+					trgSingleObjects2.addAll(res2);				
+				}
 			}
 		}
 		// For additional matching - part 1 *end*
