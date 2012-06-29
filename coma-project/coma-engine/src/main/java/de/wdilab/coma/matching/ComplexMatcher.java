@@ -316,7 +316,8 @@ public class ComplexMatcher{
 			m_cm = new Matcher[2];
 			m_cm[0] = new Matcher(Matcher.INSTANCES_DIRECT);
 			m_cm[1] = new Matcher(Matcher.INSTANCES_ALL);
-			setCombination = new Combination(Combination.SET_MAX); // SET_AVERAGE SET_DICE
+			simCombination = new Combination(Combination.COM_MAX);
+			setCombination = new Combination(Combination.SET_AVERAGE); // SET_AVERAGE SET_DICE
 			setName("InstancesCM");
 			break;
 			
