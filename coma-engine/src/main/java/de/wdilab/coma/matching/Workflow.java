@@ -45,9 +45,11 @@ public class Workflow{
 	  
 	  public static final int NODES_NAME = Constants.WORK_CNT + 6;
 	  public static final int NODES_PATH = Constants.WORK_CNT + 7;
+	  
+	  public static final int ALLCONTEXT_INST = Constants.WORK_CNT + 8;
 	 
 		public static final Integer[] WORKFLOW = {
-			ALLCONTEXT, FILTEREDCONTEXT, FRAGMENTBASED, // OPTIMISTIC
+			ALLCONTEXT, ALLCONTEXT_INST, FILTEREDCONTEXT, FRAGMENTBASED, // OPTIMISTIC
 			NODES, NODES_NAME, NODES_PATH
 		};
 		public static final List<Integer> WORKFLOW_LIST = Arrays.asList(WORKFLOW);		  
@@ -90,6 +92,14 @@ public class Workflow{
 //			cstrategies[0] = new Strategy(Strategy.NODES);
 //			cstrategies[0] = new Strategy(Strategy.CONTEXT);			
 			setName("AllContextW");
+			break;
+		case ALLCONTEXT_INST :	// $AllContextWorkflow=($ComaOptInstanceStrategy)
+			// COMA_OPT includes already resolution1 and selection
+			strategies = new Strategy[1];
+			strategies[0] = new Strategy(Strategy.COMA_OPT_INST);
+//			cstrategies[0] = new Strategy(Strategy.NODES);
+//			cstrategies[0] = new Strategy(Strategy.CONTEXT);			
+			setName("AllContextInstW");
 			break;
 		case FILTEREDCONTEXT :	// $FilteredContextWorkflow=($NodeSelectionStrategy,$UpPathSelectionStrategy)			
 			// TODO: automatically transfer the selected node pairs
