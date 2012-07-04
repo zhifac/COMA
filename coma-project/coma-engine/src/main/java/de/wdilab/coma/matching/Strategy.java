@@ -42,6 +42,7 @@ public class Strategy{ 	// previous ComplexStrategy
 	public static final int SIMPLE_NAMEPATH = Constants.STRAT_CNT + 5;
 	public static final int NODES_NAME = Constants.STRAT_CNT + 6;
 	public static final int NODES_PATH = Constants.STRAT_CNT + 7;
+	public static final int COMA_OPT_INST = Constants.STRAT_CNT + 8;
 	
 	
 	public static final int NODE_SELECTION = Constants.STRAT_CNT + 11;
@@ -50,7 +51,7 @@ public class Strategy{ 	// previous ComplexStrategy
 	public static final int DOWNPATH_SELECTION = Constants.STRAT_CNT + 14;
 	
 	public static final Integer[] STRATEGY = {
-		CONTEXT, NODES, COMA_OPT, COMA, SIMPLE_NAMEPATH,
+		CONTEXT, NODES, COMA_OPT, COMA_OPT_INST, COMA, SIMPLE_NAMEPATH,
 		NODE_SELECTION, UPPATH_SELECTION,
 		FRAG_SELECTION, DOWNPATH_SELECTION,
 		NODES_NAME, NODES_PATH
@@ -180,7 +181,6 @@ public class Strategy{ 	// previous ComplexStrategy
 			this.resolution = new Resolution(Resolution.RES1_NODES);
 			cm = new ComplexMatcher[1];
 			cm[0] = new ComplexMatcher(ComplexMatcher.NAME); // NAMETYPE NAMESTAT
-
 //			cm[0] = new ComplexMatcher(Resolution.RES2_SELFNODE,	new Matcher(Matcher.NAME),Combination.SET_AVERAGE );
 			selection = new Selection(Selection.DIR_BOTH, Selection.SEL_MULTIPLE, 0, (float)0.01, (float)0.5);
 			setName("NodesNameS");
@@ -202,6 +202,18 @@ public class Strategy{ 	// previous ComplexStrategy
 			simCombination = new Combination(Combination.COM_AVERAGE);
 			selection = new Selection(Selection.DIR_BOTH, Selection.SEL_MULTIPLE, 0, (float)0.01, (float)0.4);
 			setName("ComaOptS");
+			break;	
+		case COMA_OPT_INST :	// $ComaOptStrategy=(Paths;$NametokenSynCMatcher,$PathCMatcher,$InstanceCMatcher,$LeavesStrategy,$ParentsStrategy;Average;Both,Multiple(0,0.01,0.4))
+			this.resolution = new Resolution(Resolution.RES1_PATHS);
+			cm = new ComplexMatcher[5]; //4 2
+			cm[0] = new ComplexMatcher(ComplexMatcher.NAME); // NAMETOKENSYN NAMETYPE NAMESTAT
+			cm[1] = new ComplexMatcher(ComplexMatcher.PATH);
+			cm[2] = new ComplexMatcher(ComplexMatcher.INSTANCES);
+			cm[3] = new ComplexMatcher(ComplexMatcher.LEAVES);
+			cm[4] = new ComplexMatcher(ComplexMatcher.PARENTS);
+			simCombination = new Combination(Combination.COM_AVERAGE);
+			selection = new Selection(Selection.DIR_BOTH, Selection.SEL_MULTIPLE, 0, (float)0.01, (float)0.4);
+			setName("ComaOptInstS");
 			break;	
 		case COMA :		// $ComaStrategy=(Paths;$NametokenSynCMatcher,$PathCMatcher,$LeavesStrategy,$ParentsStrategy,$SiblingsStrategy;Average;Both,Multiple(0,0.008,0.5))
 			this.resolution = new Resolution(Resolution.RES1_PATHS);
