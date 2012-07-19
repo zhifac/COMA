@@ -180,7 +180,7 @@ public class Dlg_WorkflowVariables extends Dlg {
 			}
 		});
 		// create an Cancel Button and add listener
-		JButton cancelBtn = new JButton(GUIConstants.BUTTON_CANCEL);
+		JButton cancelBtn = new JButton(GUIConstants.BUTTON_DONE);
 		cancelBtn.addActionListener(new ActionListener() {
 			/*
 			 * if the ok button was pressed close dialog

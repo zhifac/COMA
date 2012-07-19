@@ -439,7 +439,8 @@ public class ExecuteMatchingThread extends Thread {
 			}
 	//		int fragSel = controller.getFragmentIdentification();
 	
-			if ((inputSource != null) && (inputTarget != null)) {
+			if ((inputSource != null) && (inputTarget != null) && 
+					!inputSource.isEmpty() && !inputTarget.isEmpty() ) {
 	//			if (workflow.equals(GUIConstants.STRAT_ALLCONTEXT)
 	//					|| workflow.equals(GUIConstants.STRAT_FILTEREDCONTEXT)) {
 					String question = GUIConstants.USE_SEL_FRAG
