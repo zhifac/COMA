@@ -153,7 +153,7 @@ public class SimilarityMeasure{
 			SIM_STR_COSINE_PPJOINPLUSFULLYCACHED, 
 			SIM_STR_COSINE_PPJOINPLUS,
 			SIM_STR_JACCARD,
-//			SIM_DOC_TFIDF, // problem 	
+			SIM_DOC_TFIDF,	
 		};
 
 		
