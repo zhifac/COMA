@@ -120,9 +120,9 @@
 		</dependency>
 		<dependency>
 		<groupId>org.apache.mahout</groupId>
-		<artifactId>collections</artifactId>
+		<artifactId>mahout-collections</artifactId>
 		<version>1.0</version>
-		</dependency>
+		</dependency>           
 		<dependency>
 		<groupId>org.apache.mahout</groupId>
 		<artifactId>mahout-core</artifactId>
@@ -139,9 +139,12 @@
 		<version>0.5</version>
 		</dependency>
 		<dependency>
+		<!-- be aware: this library is not in the maven repository but in the parent lib folder -->
 		<groupId>org.apache.mahout.hadoop</groupId>
 		<artifactId>hadoop-core</artifactId>
 		<version>0.20.2</version>
+		<scope>system</scope>
+		<systemPath>${basedir}/../lib/hadoop-core-0.20.2.jar</systemPath>
 		</dependency>
 		<dependency>
 			<groupId>com.google.guava</groupId>
