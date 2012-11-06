@@ -506,7 +506,15 @@ public class OWLParser_V3 extends InsertParser {
 		     		if (domain instanceof OWLNamedObject) {
 		     			// Domain is most likely OWL-Class
 		    			IRI domainIri = ((OWLNamedObject) domain).getIRI();
-		    			int domainId = classIDs.get(domainIri.toString());
+
+                         int domainId;
+                         try {
+		    			 domainId = classIDs.get(domainIri.toString());
+                         }
+                         catch( Exception e) {
+                             return;
+                         }
+
 		  				insertLink(sourcerel_id, domainId, id);
 		    		} else if (domain instanceof OWLNaryBooleanClassExpression) {
 		    			 // TODO check if possible
@@ -515,7 +523,14 @@ public class OWLParser_V3 extends InsertParser {
 		    				OWLClassExpression subDom = (OWLClassExpression) subIt.next();
 		    				if (subDom instanceof OWLNamedObject) {
 		    					IRI subIri = ((OWLNamedObject) subDom).getIRI();
-				    			int domainId = classIDs.get(subIri.toString());
+
+                                int domainId;
+                                 try {
+				    			    domainId = classIDs.get(subIri.toString());
+                                 }
+                                 catch( Exception e) {
+                                      return;
+                                 }
 				  				insertLink(sourcerel_id, domainId, id);
 		    				}
 		    			}
@@ -751,8 +766,15 @@ public class OWLParser_V3 extends InsertParser {
 		  	if (!superC.isEmpty()) {
 		  		// TODO maybe include checkKnownNamespace
 //		  		if (!(checkKnownNamespace(namespace) || checkKnownNamespace(supNamespace))) {
-		  		
-		    	int id = classIDs.get(iri);
+
+              int id;
+
+               try {
+		    	 id = classIDs.get(iri);
+               } catch( Exception e) {
+                   return;
+               }
+
 		  		for (OWLClassExpression expression : superC) {
 		  			if (expression instanceof OWLClass) {
 		  				// Superclass is a class

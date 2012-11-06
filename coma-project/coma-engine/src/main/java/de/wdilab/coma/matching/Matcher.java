@@ -104,7 +104,7 @@ public class Matcher{
 				this.resolution = new Resolution(Resolution.RES3_NAME);
 				simMeasures = new SimilarityMeasure[1];
 				// SIM_STR_TRIGRAM SIM_STR_TRIGRAM_COMA SIM_STR_TRIGRAM_IFUICE SIM_STR_TRIGRAM_LOWMEM SIM_STR_TRIGRAM_OPT
-				simMeasures[0] = new SimilarityMeasure(SimilarityMeasure.SIM_STR_TRIGRAM); 
+				simMeasures[0] = new SimilarityMeasure(SimilarityMeasure.SIM_STR_TRIGRAM);
 				// setCombination - not needed but in grammar it needs to be defined
 				setCombination = new Combination(Combination.SET_AVERAGE);
 				setName("NameM");
@@ -183,14 +183,14 @@ public class Matcher{
 			case INSTANCES_DIRECT:
 				this.resolution = new Resolution(Resolution.RES3_INST_CONTENT_DIRECT);
 				simMeasures = new SimilarityMeasure[1];
-				simMeasures[0] = new SimilarityMeasure(SimilarityMeasure.SIM_STR_JACCARD);
+				simMeasures[0] = new SimilarityMeasure(SimilarityMeasure.SIM_DOC_TFIDF);
 				setCombination = new Combination(Combination.SET_AVERAGE);
 				setName("InstancesDirectM");
 				break;
 			case INSTANCES_ALL:
 				this.resolution = new Resolution(Resolution.RES3_INST_CONTENT_ALL);
 				simMeasures = new SimilarityMeasure[1];
-				simMeasures[0] = new SimilarityMeasure(SimilarityMeasure.SIM_STR_JACCARD);
+				simMeasures[0] = new SimilarityMeasure(SimilarityMeasure.SIM_DOC_TFIDF);
 				setCombination = new Combination(Combination.SET_AVERAGE);
 				setName("InstancesAllM");
 				break;
