@@ -255,8 +255,7 @@ public class SimilarityMeasure{
 					break;
 				case SIM_STR_TRIGRAM://
 				    // matcher =  new ComaTrigram2("attr", "attr", DEFAULT_THRESHOLD, wordList, synonymList);
-                    matcher = new SampleMatcher( "attr", "attr", DEFAULT_THRESHOLD);
-//					matcher =  new IFuiceTrigram("attr", "attr", DEFAULT_THRESHOLD);
+					matcher =  new IFuiceTrigram("attr", "attr", DEFAULT_THRESHOLD);
 					break;
 				case SIM_STR_EDITDIST: //+
 					// TODO check Levenshtein EDJoin
