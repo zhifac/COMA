@@ -200,6 +200,9 @@ public class ExecWorkflow {
 		Graph srcGraph = workflow.getSource();
 		Graph trgGraph = workflow.getTarget();
 		Strategy[] begins = workflow.getBegins();
+        if( begins == null) {
+            System.out.println( "CAUTION! NO STRATEGY FOUND.");
+        }
 		Strategy secondStrategy = workflow.getSecondStrategy();
 		MatchResult result = null;
 		if (secondStrategy==null){
